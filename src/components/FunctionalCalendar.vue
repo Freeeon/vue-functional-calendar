@@ -517,6 +517,9 @@
               this.showCalendar = false
             }
 
+            this.$emit('change', [this.calendar.dateRange.start.date, this.calendar.dateRange.end.date])
+            this.calendar.selectedDate = this.calendar.dateRange.start.date + ' - ' + this.calendar.dateRange.end.date
+
             // Minimum Selected Days
             let minSelDays = this.fConfigs.minSelDays
 
@@ -553,6 +556,8 @@
           if (this.fConfigs.isModal && this.fConfigs.isAutoCloseable) {
             this.showCalendar = false
           }
+
+          this.$emit('change', [this.calendar.selectedDate])
         } else if (this.fConfigs.isMultipleDatePicker) {
           if (this.calendar.hasOwnProperty('selectedDates') &&
             this.calendar.selectedDates.find(date => date.date === item.date)) {
