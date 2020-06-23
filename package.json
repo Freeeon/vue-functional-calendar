@@ -4,9 +4,9 @@
     "email": "manuk.minasyan1@gmail.com",
     "url": "https://github.com/ManukMinasyan"
   },
-  "name": "vue-functional-calendar",
+  "name": "vue-functional-calendar-improve",
   "description": "Lightweight, high-performance calendar component based on Vue.js",
-  "version": "2.8.83",
+  "version": "2.8.83b",
   "license": "MIT",
   "repository": {
     "type": "git",

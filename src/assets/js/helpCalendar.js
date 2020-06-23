@@ -21,9 +21,15 @@ export default class helpCalendar {
     }
 
     formatDate(date) {
-        let day = date.getDate();
-        let month = date.getMonth() + 1;
-        let year = date.getFullYear();
+        function pad(number) {
+            if (number < 10) {
+                return '0' + number;
+            }
+            return number;
+        }
+        let day = pad(date.getDate());
+        let month = pad(date.getMonth() + 1);
+        let year = pad(date.getFullYear());
 
         let formattedDate = this.dateFormat.replace("dd", day.toString());
         formattedDate = formattedDate.replace("mm", month.toString());
